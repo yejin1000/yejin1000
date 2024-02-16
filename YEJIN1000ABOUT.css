@@ -159,15 +159,15 @@ h2 span::before{
   position: flex;
   transform-origin: left;
   transition: 0.5s;
+  animation: fade linear;
+  animation-timeline: view();
 }
 
 .second_section h2{
-  font-size: clamp(0.8rem, 2vw, 1.8rem);
+  font-size: clamp(1rem, 3vw, 1.8rem);
   font-weight: 500;
   margin-top: 100px;
   padding: 0px 100px;
-  animation: fade linear;
-  animation-timeline: view();
 }
 .second_section img{
   place-items: center;
@@ -180,8 +180,6 @@ h2 span::before{
   height:auto;
   display: grid;
   position: relative;
-  animation: fade linear;
-  animation-timeline: view();
 }
 .halfcircle1{
   position: absolute;
@@ -196,8 +194,20 @@ h2 span::before{
   justify-content: space-around;
   align-items: start;
   justify-items: center;
-
 }
+
+/****/
+@media (max-width:1000px){
+  .second_section .herizontal{
+    grid-template-columns: repeat(auto-fill,minmax(800px,1fr));
+  }
+  .second_section .verticle{
+    background-color: #222222;
+    border-radius: 30px;
+  }
+}
+/****/
+
 .second_section .verticle{
   display: grid;
   padding: 10px;
@@ -210,11 +220,11 @@ h2 span::before{
   margin-bottom: 20px;
   color:#fe9001;
 }
-.second_section .verticle .p{
+.second_section .verticle p{
   justify-content: start;
   align-items: center;
   text-align: top;
-  font-size: clamp(0.9em, 2vw, 1.9em);
+  font-size: clamp(0.9em, 1vw, 1.9em);
 }
 
 .third_section{
@@ -279,7 +289,7 @@ h2 span::before{
 }
 
 .third_section p{
-  font-size: clamp(0.9em, 1.2vw, 1.9em);
+  font-size: clamp(1em, 1.2vw, 1.9em);
   text-align: center;
   padding: 40px;
   color:#00411b;
@@ -566,7 +576,7 @@ body.active .container::before{
 
 /* response it */
 
-@media (max-width: 800px)
+@media (max-width: 1000px)
 {
   header nav a{
     display: none;
@@ -602,7 +612,7 @@ body.active .container::before{
 
 }
 
-@media (min-width: 800px){
+@media (min-width: 1000px){
   header .toggle{
     display: none;
   }
