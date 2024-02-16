@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>YEJIN.CHUN | SUPPORT</title>
+    <link rel="stylesheet" href="YEJIN1000ABOUT.css">
+  </head>
+
+  <section class="banner">
+    <header>
+      <div class="logo">
+        <img src="PICTURE/YEJINLOGO.png">
+        <a href="YEJIN1000HOMEPAGE.html" class="logoo">Port<span>folio</span></a>
+      </div>
+      <nav>
+        <a href="YEJIN1000HOMEPAGE.html">HOME</a>
+        <a href="YEJIN1000ABOUT.html" class="active">ABOUT</a>
+        <a href="#">PROJECT</a>
+        <a href="YEJIN1000SUPPORT.html">SUPPORT</a>
+      </nav>
+      <div id="toggle2">
+        <i class="indicator"></i>
+      </div>
+      <div class="toggle"></div>
+      <ul class="menu">
+        <li><a href="YEJIN1000HOMEPAGE.html">HOME</a></li>
+        <li><a href="YEJIN1000ABOUT.html">ABOUT</a></li>
+        <li><a href="#">PROJECT</a></li>
+        <li><a href="YEJIN1000SUPPORT.html">SUPPORT</a></li>
+      </ul>
+
+    </header>
+  <body onload="document.body.style.opacity='1'">
+    <section class="first_section">
+      <h2> I am 
+        <span style="--i:0;" data-text="Yejin&nbsp;Chun.">Yejin&nbsp;Chun.</span>
+        <span style="--i:1;" data-text="Team&nbsp;INFJ.">Team&nbsp;INFJ.</span>
+        <span style="--i:2;" data-text="optimistic.">optimistic.</span>
+        <span style="--i:3;" data-text="Idealist.">Idealist.</span>
+        <span style="--i:4;" data-text="environmentalist.">environmentalist.</span>
+      </h2>
+      <p><span>Welcome to visit. Now, it's time to get to know me better.</span><br><br>
+        I am a proud Korean who is ready to embrace the challenge and hope to build the future with the world. <br>
+        On this page, I would like to share more about myself, beyond just my work or projects.
+      </p>
+    </section>
+
+    <section class="second_section">
+      <h2>It is my understanding that in order to be a successful person, I must balance and work on all pillars of my life equally. 
+        Here are some of the main pillars that I work on daily.</h2>
+      <div class="halfcircle101">
+        <img class="halfcircle1" src="PICTURE/dark-mode.jpg">
+        <img class="halfcircle2" src="PICTURE/non-dark-mode.jpg">  
+      </div>
+
+
+      <div class="herizontal">
+        <div class="verticle">
+          <h3>1. Health</h3>
+          <p>My physical and emotional health are my top priorities. 
+            I exercise every day and I listen to (and even sing) my favorite music. And I think that I sound pretty good :)
+          </p>  
+        </div>
+
+        <div class="verticle">
+          <h3>2. Family</h3>
+          <p>My family and my loved ones are very important to me. I know that I wouldn't be who I am today without their love, care and support.
+          </p> 
+        </div>
+
+        <div class="verticle">
+          <h3>3. Faith</h3>
+          <p>My faith is my foundation. 
+            It helps to keep me grounded. 
+            It also helps me to be successful and achieve my goals. 
+            We must have faith in yourself and cultivate self-love.
+          </p>
+        </div>
+
+        <div class="verticle">
+          <h3>4. Intellectual</h3>
+          <p>I invest time in reading, learning and staying up-to-date with what is going on in the world.
+          </p>  
+        </div>
+
+        <div class="verticle">
+  
+          <h3>5. Professional</h3>
+          <p>I continuously improve my skills and I am always seeking new ways to help my clients achieve their goals.
+          </p>
+        </div> 
+      </div>
+
+    </section>
+    <section class="third_section">
+      <div class="bgcolor">      
+        <h3> peace&nbsp;of&nbsp;mind</h3>
+        <div class="nature101">
+        <img class="nature" src="PICTURE/nature.gif">
+        <img class="nature2" src="PICTURE/nature_nondark.gif">
+        </div>
+        <p>A person who loves nature, music, exercise, sports, and general well-being.<br>
+          I do my best to live the most balanced life possible. 
+          Life is a gift that we must not take for granted. 
+          Nothing is more important to me than the peace of mind of my loved ones and the being in the best mental and physical shape possible.
+        </p>  
+      </div>
+    </section> 
+
+    <section class="last_section">
+      <h2> Thank you for visit,<br>
+        and i hope you are doing well.
+      </h2>
+      <div class="end">
+        <P>Stay ahead of the new information<br>and never miss out on my latest updates<br>by subscribing to our newsletter today!</P>
+        <img class="arrow" src="PICTURE/Vector 8.png">
+      </div>
+      <div class="check">
+        <div class="container">
+          <div class="container-f">
+            <div class="button">subscribe</div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <script>
+    let check = document.querySelector('.check');
+      let moveX, moveY; 
+
+      check.addEventListener('mousemove', (e) => {
+        let x = e.offsetX;
+        let y = e.offsetY;
+        let CheckWidth = check.clientWidth;
+        let CheckHeight = check.clientHeight;
+        moveX = (x -+ CheckWidth);
+        moveY = (y -+ CheckHeight);
+        check.style.transform = `translateX(${moveX}px) translateY(${moveY}px)`;
+      });
+
+      check.addEventListener('mouseout', (e) => {
+        check.style.transform = `translateX(0px) translateY(0px)`;
+      });
+    </script>
+
+
+    <script>
+      let banner = document.querySelector('.banner');
+      let menutoggle = document.querySelector('.toggle');
+      menutoggle.onclick = function () {
+        menutoggle.classList.toggle('active');
+        banner.classList.toggle('active');
+      }
+
+      const toggle2 = document.getElementById('toggle2');
+      toggle2.onclick = function () {
+        toggle2.classList.toggle('active');
+        document.body.classList.toggle('active');
+      }
+    </script>
+  </body>
+  </section>
+
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>YEJIN.CHUN | SUPPORT</title>
+    <link rel="stylesheet" href="YEJIN1000SUPPORT.css">
+  </head>
+  <body onload="document.body.style.opacity='1'">
+    <div class="bg">
+      <div class="bubbles">
+        <span style="--i:11;"></span>
+        <span style="--i:24"></span>
+        <span style="--i:25"></span>
+        <span style="--i:24"></span>
+        <span style="--i:25"></span>
+        <span style="--i:18"></span>
+        <span style="--i:19"></span>
+        <span style="--i:22"></span>
+        <span style="--i:26"></span>
+        <span style="--i:20"></span>
+        <span style="--i:15"></span>
+        <span style="--i:17"></span>
+        <span style="--i:13"></span>
+        <span style="--i:27"></span>
+        <span style="--i:28"></span>
+        <span style="--i:12"></span>
+        <span style="--i:23"></span>
+        <span style="--i:15"></span>
+        <span style="--i:21"></span>
+        <span style="--i:28"></span>
+        <span style="--i:12"></span>
+        <span style="--i:18"></span>
+        <span style="--i:19"></span>
+        <span style="--i:22"></span>
+        <span style="--i:26"></span>
+        <span style="--i:20"></span>
+        <span style="--i:21"></span>
+        <span style="--i:23"></span>
+        <span style="--i:17"></span>
+        <span style="--i:13"></span>
+        <span style="--i:27"></span>
+        <span style="--i:16"></span>
+        <span style="--i:14"></span>
+        <span style="--i:11;"></span>
+        <span style="--i:16"></span>
+        <span style="--i:14"></span>
+      </div>
+    </div>
+    <section class="banner">
+      <header>
+        <div class="logo">
+          <img src="PICTURE/YEJINLOGO.png">
+            <a href="YEJIN1000HOMEPAGE.html" class="logoo">Port<span>folio</span></a>
+          </div>
+          <nav>
+            <a href="YEJIN1000HOMEPAGE.html">HOME</a>
+            <a href="YEJIN1000ABOUT.html">ABOUT</a>
+            <a href="#">PROJECT</a>
+            <a href="YEJIN1000SUPPORT.html" class="active">SUPPORT</a>
+          </nav>
+          <div id="toggle2">
+            <i class="indicator"></i>
+          </div>
+            <div class="toggle"></div>
+            <ul class="menu">
+              <li><a href="YEJIN1000HOMEPAGE.html">HOME</a></li>
+              <li><a href="YEJIN1000ABOUT.html">ABOUT</a></li>
+              <li><a href="#">PROJECT</a></li>
+              <li><a href="YEJIN1000SUPPORT.html">SUPPORT</a></li>
+            </ul>
+        </header>
+        <section class="ly">
+          <div class="content">
+            <div class="container">
+              <div class="container-f">
+                <div class="hi">      
+                  <h3><a href="yejin-1000-access.html">@YEJIN1000</a></h3>
+                </div>
+                <div class="description">
+                  <p><span>Welcome and Thank you for your Support</span></p>
+                </div>
+                <div class="description">
+                  <p> Following button is for treat @yejin1000 some coffee</p>
+                  <p>it will be very hlepful for her life :)</p>
+                </div>
+                <div class="paypal">
+          
+                <div id="smart-button-container">
+                  <div style="text-align: center;">
+                  <div style="margin-bottom: 1.25rem;">
+                  <p>Treat Her Some Coffee ☕️ (Euro)</p>
+                  <select id="item-options"><option price="10" value="Coffee">Coffee ☕️ - 10 EUR</option><option price="15" value="Treat Her Coffee With Cookies">Coffee with Cookies☕️🍪 - 15EUR</option></select> <select id="quantitySelect" style="visibility: hidden"></select></div>
+                  
+                  <div id="paypal-button-container">&nbsp;</div>
+                  </div>
+                  </div>
+                  <script src="https://www.paypal.com/sdk/js?client-id=AX_IBqtzb0z7gGY92mJL9TkIgHDSsk5xKRVk7efuWLTfpwhXWI1UIGhDF0SBLDJGfAvMkbk5OkMLEaHW&currency=EUR" data-sdk-integration-source="button-factory"></script><script>
+                  function initPayPalButton() {
+                  var shipping = 0;
+                  var itemOptions = document.querySelector("#smart-button-container #item-options");
+                  var quantity = parseInt();
+                  var quantitySelect = document.querySelector("#smart-button-container #quantitySelect");
+                  if (!isNaN(quantity)) {
+                  quantitySelect.style.visibility = "visible";
+                  }
+                  var orderDescription = 'Treat Her Some Coffee';
+                  if(orderDescription === '') {
+                  orderDescription = 'Item';
+                  }
+                  paypal.Buttons({
+                  style: {
+                  shape: 'pill',
+                  color: 'black',
+                  layout: 'horizontal',
+                  label: 'paypal',
+                  
+                  },
+                  createOrder: function(data, actions) {
+                  var selectedItemDescription = itemOptions.options[itemOptions.selectedIndex].value;
+                  var selectedItemPrice = parseFloat(itemOptions.options[itemOptions.selectedIndex].getAttribute("price"));
+                  var tax = (0 === 0 || false) ? 0 : (selectedItemPrice * (parseFloat(0)/100));
+                  if(quantitySelect.options.length > 0) {
+                  quantity = parseInt(quantitySelect.options[quantitySelect.selectedIndex].value);
+                  } else {
+                  quantity = 1;
+                  }
+                  
+                  tax *= quantity;
+                  tax = Math.round(tax * 100) / 100;
+                  var priceTotal = quantity * selectedItemPrice + parseFloat(shipping) + tax;
+                  priceTotal = Math.round(priceTotal * 100) / 100;
+                  var itemTotalValue = Math.round((selectedItemPrice * quantity) * 100) / 100;
+                  
+                  return actions.order.create({
+                  purchase_units: [{
+                  description: orderDescription,
+                  amount: {
+                  currency_code: 'EUR',
+                  value: priceTotal,
+                  breakdown: {
+                  item_total: {
+                  currency_code: 'EUR',
+                  value: itemTotalValue,
+                  },
+                  shipping: {
+                  currency_code: 'EUR',
+                  value: shipping,
+                  },
+                  tax_total: {
+                  currency_code: 'EUR',
+                  value: tax,
+                  }
+                  }
+                  },
+                  items: [{
+                  name: selectedItemDescription,
+                  unit_amount: {
+                  currency_code: 'EUR',
+                  value: selectedItemPrice,
+                  },
+                  quantity: quantity
+                  }]
+                  }]
+                  });
+                  },
+                  onApprove: function(data, actions) {
+                  return actions.order.capture().then(function(orderData) {
+                  
+                  // Full available details
+                  console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                  
+                  // Show a success message within this page, e.g.
+                  const element = document.getElementById('paypal-button-container');
+                  element.innerHTML = '';
+                  element.innerHTML = '<h3>Thank you for your support!</h3>';
+                  
+                  // Or go to another URL: actions.redirect('thank_you.html');
+                  
+                  });
+                  },
+                  onError: function(err) {
+                  console.log(err);
+                  },
+                  }).render('#paypal-button-container');
+                  }
+                  initPayPalButton();
+                  </script>
+                  </div>
+                <div class="footer">        
+                  <p>© 2023 @YEJIN1000 | All Right Reserved</p>
+                </div>
+      
+      
+              </div>
+             </div>
+           </div>
+        </section>
+        
+          <script>
+            let banner = document.querySelector('.banner');
+            let menutoggle = document.querySelector('.toggle');
+            menutoggle.onclick = function () {
+              menutoggle.classList.toggle('active');
+              banner.classList.toggle('active');
+            }
+      
+            const toggle2 = document.getElementById('toggle2');
+            toggle2.onclick = function () {
+              toggle2.classList.toggle('active');
+              document.body.classList.toggle('active');
+            }
+          </script>
+    
+      
+          <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+          <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+      
+          </div>
+    </section>
+  </body>
+</html>
