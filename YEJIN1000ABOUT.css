@@ -197,15 +197,6 @@ h2 span::before{
 }
 
 /****/
-@media (max-width:1000px){
-  .second_section .herizontal{
-    grid-template-columns: repeat(auto-fill,minmax(800px,1fr));
-  }
-  .second_section .verticle{
-    background-color: #222222;
-    border-radius: 30px;
-  }
-}
 /****/
 
 .second_section .verticle{
@@ -599,15 +590,24 @@ body.active .container::before{
     width: 150px;
     height: 75px;
   }
-}
 
-@media (max-width: 1000px){
   .third_section img{
     width: 400px;
   }
 
   .third_section .bgcolor{
     border-radius: 40px;
+  }
+
+  .second_section .herizontal{
+    grid-template-columns: repeat(auto-fill,minmax(800px,1fr));
+  }
+  .second_section .verticle{
+    background-color: #222222;
+    border-radius: 30px;
+  }
+  body.active .second_section .verticle{
+    background-color: #dedede;
   }
 
 }
