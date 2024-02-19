@@ -205,6 +205,8 @@ h2 span::before{
   display: grid;
   padding: 10px;
   color: #ffc880;
+  animation: fade linear;
+  animation-timeline: view();
 }
 .second_section .verticle h3{
   text-align: center;
@@ -212,12 +214,16 @@ h2 span::before{
   text-transform: uppercase;
   margin-bottom: 20px;
   color:#fe9001;
+  animation: fade linear;
+  animation-timeline: view();
 }
 .second_section .verticle p{
   justify-content: start;
   align-items: center;
   text-align: top;
   font-size: clamp(0.9em, 1vw, 1.9em);
+  animation: fade linear;
+  animation-timeline: view();
 }
 
 .third_section{
@@ -742,7 +748,9 @@ body.active footer .sci li{
     opacity:1;
     transform: translate();
   }
-}/**footer start**/
+}
+
+/**footer start**/
 
 
 footer{
