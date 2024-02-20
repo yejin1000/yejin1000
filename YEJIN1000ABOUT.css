@@ -327,70 +327,46 @@ h2 span::before{
 .last_section{
   width: 100%;
   min-height: 100vh;
+  position: relative;
   justify-content: center;
+  display: flex;
   align-items: center;
-  position: flex;
+  flex-direction: column;
   transform-origin: left;
   transition: 0.5s;
   animation: fade linear;
   animation-timeline: view();
 }
-
-.last_section h2{
-  color: #fff;
-  font-size: clamp(1rem, 4vw, 5.5rem);
-  font-weight: 600;
-  padding: 100px 100px 0;
-  text-transform: uppercase;
-  font-style: italic;
+.last_section .cookierun{
+  width: 100%;
+  height:auto;
+  display: grid;
+  position: relative;
+  place-items: center;
+  transition: 0.5s;
+}
+.cookie{
+  position: absolute;
+  transition: 0.5s;
+}
+.cookie2{
+  opacity: 0;
 }
 
 .last_section p{
-  color: #fe9001;
-  font-size: clamp(0.8rem, 2vw, 2.8rem);
-  font-weight: 500;
-  font-style: italic;
-  font-family: "EB Garamond", serif;
-  padding: 0 100px;
-  text-align: right;
-  text-transform: uppercase;
-  margin-top: 3%;
-}
-.check{
-  position: relative;
-  width: 500px;
-  height:300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: -10%;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-.button{
-  width: 350px;
-  padding: 10px;
-  color:#000;
   font-size: 1.5em;
-  text-transform: uppercase;
-  font-weight: 700;
+  color: #fff;
   text-align: center;
-  border-radius: 20px;
-  z-index: 9999;
-  transition: 0.5s;
+  padding: 100px 100px;
+  margin-top: -10%;
 }
 
 .last_section img{
-  width: 300px;
-  height: 150px;
-  margin-left: 30%;
   transition: 0.5s;
+  place-items: center;
+  width: 80%;
 }
 
-.end{
-  display: grid;
-  position: relative;
-}
 /*toggle1*/
 /*only for the moblie*/
 
@@ -581,10 +557,6 @@ body.active .third_section h3{
   transition: 0.5s;
   color:#00411b;
 }
-body.active .last_section img{
-filter: invert(1);
-transition: 0.5s;
-}
 
 body.active .container::after{
 
@@ -607,6 +579,14 @@ body.active footer .sci li{
   transition: 0.5s;
 }
 
+body.active .cookie{
+  opacity: 0;
+  transition: 0.5s;
+}
+body.active .cookie2{
+  opacity: 1;
+  transition: 0.5s;
+}
 
 /* response it */
 
@@ -631,8 +611,12 @@ body.active footer .sci li{
     padding: 15px;
   }
   .last_section img{
-    width: 150px;
-    height: 75px;
+    width: 80%;
+  }
+
+  .last_section p{
+    font-size: 1em;
+    padding: 50px 50px;
   }
 
   .third_section img{
