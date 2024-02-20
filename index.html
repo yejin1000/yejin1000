@@ -12,7 +12,7 @@
       <header>
         <div class="logo">
           <img src="PICTURE/YEJINLOGO.png">
-          <a href="#" class="logoo">Port<span>folio</span></a>
+          <a href="https://yejin1000.github.io/yejin1000/" class="logoo">Port<span>folio</span></a>
         </div>
         <div class="toggle"></div>
       </header>
@@ -24,9 +24,74 @@
           <h3>Student / Part-time Web Designer</h3>
           <p>I am a proud Korean who is ready to embrace the challenge and hope to build the future with the world.
             You might not know what I do, but I would like to share a bit more about who the woman behind the work is.</p>
-          <a href="#">Download CV</a>
-          <a href="#">Start Exploring</a>
+          <div class="container">
+            <div class="card">
+              <div class="imgBx">
+                <h3>Download&nbsp;CV</h3>
+              </div>
+              <div class="pw">
+                <p>Please enter the password to download her CV</p>
+                <form class="passform" onsubmit="return passcheck1(event)" action="YEJIN-cv.html">
+                  <input class="password" type="password" placeholder="Enter Password" required id="pass1">
+                  <input class="submit" type="submit">
+                </form>
+              </div>
+             <h2>
+              <a href="#">Forget&nbsp;Password?</a>
+            </h2>
+            </div>
+            <div class="card">
+              <div class="imgBx">
+                <h3>Start&nbsp;Exploring</h3>
+              </div>
+              <div class="pw">
+                <p>Please enter the password to learn more about her.</p>
+                <form class="passform" onsubmit="return passcheck2(event)" action="https://www.instagram.com/">
+                  <input class="password" type="password" placeholder="Enter Password" required id="pass2">
+                  <input class="submit" type="submit">
+                </form>
+              </div>
+             <h2>
+              <a href="#">Forget&nbsp;Password?</a>
+            </h2>
+          </div>
         </div>
+      
+        <script>
+          var password1 = "YEJIN1000";
+          function passcheck1(event) {
+            event.preventDefault();
+            if(document.getElementById('pass1').value == password1){
+              alert('Correct Password, Welcome :)');
+              return true;
+            } else {
+              alert('Wrong Password, Try Again'); 
+              return false;
+            }
+          }
+        </script>
+
+
+        <script>
+          var password2 = "1000YEJIN";
+          function passcheck2(event) {
+            event.preventDefault();
+            if(document.getElementById('pass2').value == password2){
+              alert('Correct Password, Click Ok to enter Website');
+              // 비밀번호가 맞으면 페이지 이동 또는 다른 작업 수행
+              window.location.href = "https://www.instagram.com/"; // Instagram 페이지로 이동
+              return true;
+            } else {
+              alert('Wrong Password'); 
+              return false;
+            }
+          }
+        </script>
+
+        </div>
+   
+
+
       </div>
       <ul class="sci">
         <li><a href="https://www.instagram.com/yejin_1000/"  target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
@@ -38,7 +103,7 @@
       </ul>
 
       <ul class="menu">
-        <li><a href="index.html">HOME</a></li>
+        <li><a href="https://yejin1000.github.io/yejin1000/">HOME</a></li>
         <li><a href="YEJIN1000ABOUT.html">ABOUT</a></li>
         <li><a href="#">PROJECT</a></li>
         <li><a href="YEJIN1000SUPPORT.html">SUPPORT</a></li>
@@ -63,4 +128,4 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>
-</html>
+</html>            
