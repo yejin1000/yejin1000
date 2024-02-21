@@ -24,7 +24,7 @@
           <h3>Student / Part-time Web Designer</h3>
           <p>I am a proud Korean who is ready to embrace the challenge and hope to build the future with the world.
             You might not know what I do, but I would like to share a bit more about who the woman behind the work is.</p>
-          <div class="container">
+         <div class="container">
             <div class="card">
               <div class="imgBx">
                 <h3>Download&nbsp;CV</h3>
@@ -37,7 +37,7 @@
                 </form>
               </div>
              <h2>
-              <a href="#">Forget&nbsp;Password?</a>
+              <a onclick="showPopup(true)">Forget&nbsp;Password?</a>
             </h2>
             </div>
             <div class="card">
@@ -52,11 +52,40 @@
                 </form>
               </div>
              <h2>
-              <a href="#">Forget&nbsp;Password?</a>
+              <a onclick="showPopup(true)">Forget&nbsp;Password?</a>
+            </div>
             </h2>
           </div>
+          <div id="popup" class="hide">
+            <div class="content">
+              <p class="infoinpop">
+                Don't let a forgotten password keep you from accessing important information. 
+                Reach out to Yejin Chun via messenger and she'll provide you with the password code in no time. 
+              </p>
+              <button onclick="closePopup()">OK</button>
+            </div>
+          </div>
         </div>
-      
+
+        <script>
+          function showPopup(hasFilter) {
+            const popup = document.querySelector('#popup');
+  
+          if (hasFilter) {
+            popup.classList.add('has-filter');
+          } else {
+            popup.classList.remove('has-filter');
+          }
+  
+          popup.classList.remove('hide');
+          }
+  
+          function closePopup() {
+          const popup = document.querySelector('#popup');
+          popup.classList.add('hide');
+          }
+        </script>
+        
         <script>
           var password1 = "YEJIN1000";
           function passcheck1(event) {
