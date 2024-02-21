@@ -31,7 +31,7 @@
               </div>
               <div class="pw">
                 <p>Please enter the password to download her CV</p>
-                <form class="passform" onsubmit="return passcheck1(event)" action="YEJIN-cv.html">
+                <form class="passform" onsubmit="return passcheck1(event)" action="https://yejin1000.github.io/yejin-chun/YEJINCVP.html">
                   <input class="password" type="password" placeholder="Enter Password" required id="pass1">
                   <input class="submit" type="submit">
                 </form>
@@ -63,6 +63,7 @@
             event.preventDefault();
             if(document.getElementById('pass1').value == password1){
               alert('Correct Password, Welcome :)');
+              window.location.href = "https://yejin1000.github.io/yejin-chun/YEJINCVP.html";
               return true;
             } else {
               alert('Wrong Password, Try Again'); 
