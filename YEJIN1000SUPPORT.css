@@ -190,7 +190,7 @@ header .toggle.active{
   align-items: center;
   flex-direction: column;
   text-align: center;
-  max-width: 100%;
+  width: 100%;
   transform-origin: left;
   transition: 0.5s;
 }
@@ -266,25 +266,22 @@ header .toggle.active{
 /* PAYPAL */
 
 .container-f .hi{
-  margin-top: 20%;
   width: 100%;
-  height: 30%;
-  display: grid;
-  align-content: center;
-  justify-content: center;
-  align-items: start;
+  position: relative;
 }
-.container-f .hi h3{
-  font-size: 3rem;
-  color: black;
+
+.hi img{
+  width: 200px;
+  transition: 0.5s;
 }
-.container-f .hi h3 a{
-  text-decoration: none;
-  color: black;
-  transition: 1s;
+.hi .logooo101{
+  position: absolute;
+  margin-top: -5%;
+  opacity: 1;
 }
-.container-f .hi h3 a:hover{
-  color: #ffc53e;
+
+.hi .logooo{
+  opacity: 0;
   transition: 0.5s;
 }
 .container-f .description{
@@ -309,12 +306,11 @@ header .toggle.active{
 .container-f .paypal{
   width:100%;
   height: 40%;
-  margin-top: 5%;
   background-color: #ffc53e33;
   border-radius: 30px;
   align-items: center;
   justify-content: center;
-  padding: 20px 20px 0px 20px;
+  padding: 20px 20px 30px 20px;
 }
 
 .container-f .paypal p{
@@ -448,6 +444,16 @@ body.active header nav a:hover{
   color:#ffc53e;
 }
 
+body.active .hi .logooo101{
+  opacity: 0;
+  transition: 0.5s;
+}
+
+body.active .hi .logooo{
+  opacity: 1;
+  transition: 0.5s;
+}
+
 @media (max-width: 1000px)
 {
   header nav a{
@@ -524,3 +530,8 @@ body.active footer .sci li{
 }
 /** footer part END **/
 
+.logooo{
+  width: 250px;
+  margin-top: -5%;
+  
+}
