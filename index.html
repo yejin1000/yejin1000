@@ -24,14 +24,14 @@
           <h3>Student / Part-time Web Designer</h3>
           <p>I am a proud Korean who is ready to embrace the challenge and hope to build the future with the world.
             You might not know what I do, but I would like to share a bit more about who the woman behind the work is.</p>
-         <div class="container">
+          <div class="container">
             <div class="card">
               <div class="imgBx">
                 <h3>Download&nbsp;CV</h3>
               </div>
               <div class="pw">
                 <p>Please enter the password to download her CV</p>
-                <form class="passform" onsubmit="return passcheck1(event)" action="https://yejin1000.github.io/yejin-chun/YEJINCVP.html">
+                <form class="passform" onsubmit="return passcheck1(event)">
                   <input class="password" type="password" placeholder="Enter Password" required id="pass1">
                   <input class="submit" type="submit">
                 </form>
@@ -66,59 +66,10 @@
             </div>
           </div>
         </div>
-
-        <script>
-          function showPopup(hasFilter) {
-            const popup = document.querySelector('#popup');
-  
-          if (hasFilter) {
-            popup.classList.add('has-filter');
-          } else {
-            popup.classList.remove('has-filter');
-          }
-  
-          popup.classList.remove('hide');
-          }
-  
-          function closePopup() {
-          const popup = document.querySelector('#popup');
-          popup.classList.add('hide');
-          }
-        </script>
-        
-        <script>
-          var password1 = "YEJIN1000";
-          function passcheck1(event) {
-            event.preventDefault();
-            if(document.getElementById('pass1').value == password1){
-              alert('Correct Password, Welcome :)');
-              window.location.href = "https://yejin1000.github.io/yejin-chun/YEJINCVP.html";
-              return true;
-            } else {
-              alert('Wrong Password, Try Again'); 
-              return false;
-            }
-          }
-        </script>
-
-
-        <script>
-          var password2 = "1000YEJIN";
-          function passcheck2(event) {
-            event.preventDefault();
-            if(document.getElementById('pass2').value == password2){
-              alert('Correct Password, Click Ok to enter Website');
-              // 비밀번호가 맞으면 페이지 이동 또는 다른 작업 수행
-              window.location.href = "https://www.instagram.com/"; // Instagram 페이지로 이동
-              return true;
-            } else {
-              alert('Wrong Password'); 
-              return false;
-            }
-          }
-        </script>
-
         </div>
+
+      </script>
+      </script>
    
 
 
@@ -140,22 +91,10 @@
       </ul>
 
     </section>
-    <script>
-    let banner = document.querySelector('.banner');
-    let menutoggle = document.querySelector('.toggle');
-    menutoggle.onclick = function () {
-      menutoggle.classList.toggle('active');
-      banner.classList.toggle('active');
-    }
 
-    const toggle2 = document.getElementById('toggle2');
-    toggle2.onclick = function () {
-      toggle2.classList.toggle('active');
-      document.body.classList.toggle('active');
-    }
-    </script>
+    <script src="lock2.min.js"></script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>
-</html>            
+</html>             
