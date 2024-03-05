@@ -533,6 +533,7 @@ header .toggle.active{
 
 .banner.active .first_section,
 .banner.active .second_section,
+.banner.active .third_section_edit,
 .banner.active .third_section,
 .banner.active .last_section{
   transform: scale(0);
