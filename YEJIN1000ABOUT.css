@@ -238,6 +238,7 @@ h2 span::before{
   color: #ffc880;
   animation: fade linear;
   animation-timeline: view();
+
 }
 .second_section .verticle h3{
   text-align: center;
@@ -247,6 +248,7 @@ h2 span::before{
   color:#fe9001;
   animation: fade linear;
   animation-timeline: view();
+
 }
 .second_section .verticle p{
   justify-content: start;
@@ -255,6 +257,7 @@ h2 span::before{
   font-size: clamp(0.9em, 1vw, 1.9em);
   animation: fade linear;
   animation-timeline: view();
+
 }
 
 .third_section{
@@ -324,6 +327,107 @@ h2 span::before{
   padding: 40px;
   color:#00411b;
 }
+
+.third_section_edit{
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+  transform-origin: left;
+  transition: 0.5s;
+  animation: fade linear;
+  animation-timeline: view();
+}
+
+.third_section_edit h3{
+  margin-top: 10%;
+  padding: 50px 100px 0;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+  animation: fade linear;
+  animation-timeline: view();
+  transition: 0.5s;
+}
+
+.third_section_edit h4{
+  font-size: 0.7em;
+  font-weight: 100;
+  color: #b1b1b1;
+  text-align: center;
+  animation: fade linear;
+}
+
+.listup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3%;
+  width: 100%;
+  animation: fade linear;
+  animation-timeline: view();
+}
+
+.scroll{
+  position: relative;
+  display: flex;
+  width: 80%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent,#fff 10%,#fff 90%,transparent);
+  mask-image:linear-gradient(90deg, transparent,#fff 10%,#fff 90%,transparent);
+}
+.scroll div{
+  white-space: nowrap;
+  animation: animateoflist var(--t)linear infinite;
+  animation-delay: calc(var(--t) * -1);
+  -webkit-animation: animateoflist var(--t)linear infinite;
+  -webkit-animation-delay: calc(var(--t) * -1);
+}
+.scroll div:nth-child(2){
+  animation: animateofgo2 var(--t)linear infinite;
+  animation-delay: calc(var(--t) / -2);
+  -webkit-animation:animateofgo2 var(--t)linear infinite;
+  -webkit-animation-delay:calc(var(--t) / -2);
+}
+
+@keyframes animateoflist
+{
+  0%
+  {
+    transform: translateX(100%);
+  }
+  100%
+  {
+    transform: translateX(-100%);
+  }
+}
+@keyframes animateofgo2
+{
+  0%
+  {
+    transform: translateX();
+  }
+  100%
+  {
+    transform: translateX(-200%);
+  }
+}
+
+.imgbx img{
+  max-width:700px;
+  scale:0.8;
+  filter:grayscale(1);
+}
+.imgbx img:hover{
+  filter:grayscale(0)
+}
+
 
 .last_section{
   width: 100%;
@@ -559,6 +663,12 @@ body.active .third_section h3{
   color:#00411b;
 }
 
+body.active .third_section_edit h3{
+  color: #181f31;
+  transition: 0.5s;
+}
+
+
 body.active .container::after{
 
   background-color: #00411b;
@@ -665,6 +775,13 @@ body.active .cookie2{
     top: 100%; /* 위쪽에 배치 */
   }
 
+  .third_section_edit h3{
+    padding: 50px;
+    font-size: 1.1em;
+    font-weight: 400;
+  }
+
+
  /** **/
   body.active .second_section .verticle{
     width: 80%;
@@ -697,6 +814,18 @@ body.active .cookie2{
   }
 
 }
+
+@media (max-width: 600px){
+  .imgbx img{
+    max-width:300px;
+  }
+}
+@media (max-width:800px){
+  .imgbx img{
+    max-width: 400px;
+  }
+}
+
 
 @media (min-width: 1000px){
   header .toggle{
