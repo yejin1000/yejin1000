@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         commentModal.style.display = "none";
       }
     } else {
-      alert('비밀번호가 일치하지 않습니다.');
+      alert('The passwords you provided do not match.');
     }
   });
 
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
       saveComments();
       commentModal.style.display = "none";
     } else {
-      alert('비밀번호가 일치하지 않습니다.');
+      alert('The passwords you provided do not match.');
     }
   });
 
@@ -114,14 +114,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 사용자가 입력한 비밀번호, 사용자가 입력한 비밀번호, mastercode가 일치하는지 확인
     if (password === commentPassword || password === userPassword || password === masterCode) {
-      const newCommentText = prompt('수정할 댓글 내용을 입력하세요:', selectedComment.textContent.trim());
+      const newCommentText = prompt('Edited Your Comments here', selectedComment.textContent.trim());
       if (newCommentText !== null) {
         selectedComment.textContent = newCommentText;
         saveComments();
         commentModal.style.display = "none";
       }
     } else {
-      alert('비밀번호가 일치하지 않습니다.');
+      alert('The passwords you provided do not match.');
     }
   });
 
