@@ -7,46 +7,7 @@
     <link rel="stylesheet" href="YEJIN1000SUPPORT.css">
   </head>
   <body onload="document.body.style.opacity='1'">
-    <div class="bg">
-      <div class="bubbles">
-        <span style="--i:11;"></span>
-        <span style="--i:24"></span>
-        <span style="--i:25"></span>
-        <span style="--i:24"></span>
-        <span style="--i:25"></span>
-        <span style="--i:18"></span>
-        <span style="--i:19"></span>
-        <span style="--i:22"></span>
-        <span style="--i:26"></span>
-        <span style="--i:20"></span>
-        <span style="--i:15"></span>
-        <span style="--i:17"></span>
-        <span style="--i:13"></span>
-        <span style="--i:27"></span>
-        <span style="--i:28"></span>
-        <span style="--i:12"></span>
-        <span style="--i:23"></span>
-        <span style="--i:15"></span>
-        <span style="--i:21"></span>
-        <span style="--i:28"></span>
-        <span style="--i:12"></span>
-        <span style="--i:18"></span>
-        <span style="--i:19"></span>
-        <span style="--i:22"></span>
-        <span style="--i:26"></span>
-        <span style="--i:20"></span>
-        <span style="--i:21"></span>
-        <span style="--i:23"></span>
-        <span style="--i:17"></span>
-        <span style="--i:13"></span>
-        <span style="--i:27"></span>
-        <span style="--i:16"></span>
-        <span style="--i:14"></span>
-        <span style="--i:11;"></span>
-        <span style="--i:16"></span>
-        <span style="--i:14"></span>
-      </div>
-    </div>
+    
   <section class="banner">
       <header>
         <div class="logo">
@@ -70,152 +31,188 @@
         </ul>
       </header>
 
-        <section class="ly">
+   
+      <div class="toolttool">
+
+        <section class="First">
           <div class="content">
             <div class="container">
               <div class="container-f">
-                <div class="hi">      
-                  <img class="logooo101"  src="PICTURE/YEJINLOGO.png">
-                  <img class="logooo" src="PICTURE/Yejin_logo_D.png">
+                <div class="description">
+                  <p><span>Animal Protection and Volunteering:<br></span><span>Let's Create a Better</span><span> World Together</span></p>
                 </div>
                 <div class="description">
-                  <p><span>Welcome and Thank you for your Support</span></p>
-                </div>
-                <div class="description">
-                  <p> Hey 👋 I just created a page here. You can now buy me a coffee!</p>
-                  <p>it will be very hlepful for her life :)</p>
-                </div>
-                <div class="paypal">
-          
-                <div id="smart-button-container">
-                  <div style="text-align: center;">
-                  <div style="margin-bottom: 1.25rem;">
-                  <p>Buy YEJIN1000 a coffee☕️ (USD)</p>
-                  <select id="item-options"><option price="5" value="Coffee">Coffee ☕️ - 5 USD</option><option price="10" value="Coffee With Cookies">Coffee with Cookies☕️🍪 - 10USD</option></select> <select id="quantitySelect" style="visibility: hidden"></select></div>
-                  
-                  <div id="paypal-button-container">&nbsp;</div>
-                  </div>
-                  </div>
-                  <script src="https://www.paypal.com/sdk/js?client-id=AX_IBqtzb0z7gGY92mJL9TkIgHDSsk5xKRVk7efuWLTfpwhXWI1UIGhDF0SBLDJGfAvMkbk5OkMLEaHW&currency=USD" data-sdk-integration-source="button-factory"></script><script>
-                  function initPayPalButton() {
-                  var shipping = 0;
-                  var itemOptions = document.querySelector("#smart-button-container #item-options");
-                  var quantity = parseInt();
-                  var quantitySelect = document.querySelector("#smart-button-container #quantitySelect");
-                  if (!isNaN(quantity)) {
-                  quantitySelect.style.visibility = "visible";
-                  }
-                  var orderDescription = 'buy me a coffee';
-                  if(orderDescription === '') {
-                  orderDescription = 'Item';
-                  }
-                  paypal.Buttons({
-                  style: {
-                  shape: 'pill',
-                  color: 'black',
-                  layout: 'horizontal',
-                  label: 'paypal',
-                  
-                  },
-                  createOrder: function(data, actions) {
-                  var selectedItemDescription = itemOptions.options[itemOptions.selectedIndex].value;
-                  var selectedItemPrice = parseFloat(itemOptions.options[itemOptions.selectedIndex].getAttribute("price"));
-                  var tax = (0 === 0 || false) ? 0 : (selectedItemPrice * (parseFloat(0)/100));
-                  if(quantitySelect.options.length > 0) {
-                  quantity = parseInt(quantitySelect.options[quantitySelect.selectedIndex].value);
-                  } else {
-                  quantity = 1;
-                  }
-                  
-                  tax *= quantity;
-                  tax = Math.round(tax * 100) / 100;
-                  var priceTotal = quantity * selectedItemPrice + parseFloat(shipping) + tax;
-                  priceTotal = Math.round(priceTotal * 100) / 100;
-                  var itemTotalValue = Math.round((selectedItemPrice * quantity) * 100) / 100;
-                  
-                  return actions.order.create({
-                  purchase_units: [{
-                  description: orderDescription,
-                  amount: {
-                  currency_code: 'USD',
-                  value: priceTotal,
-                  breakdown: {
-                  item_total: {
-                  currency_code: 'USD',
-                  value: itemTotalValue,
-                  },
-                  shipping: {
-                  currency_code: 'USD',
-                  value: shipping,
-                  },
-                  tax_total: {
-                  currency_code: 'USD',
-                  value: tax,
-                  }
-                  }
-                  },
-                  items: [{
-                  name: selectedItemDescription,
-                  unit_amount: {
-                  currency_code: 'USD',
-                  value: selectedItemPrice,
-                  },
-                  quantity: quantity
-                  }]
-                  }]
-                  });
-                  },
-                  onApprove: function(data, actions) {
-                  return actions.order.capture().then(function(orderData) {
-                  
-                  // Full available details
-                  console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-                  
-                  // Show a success message within this page, e.g.
-                  const element = document.getElementById('paypal-button-container');
-                  element.innerHTML = '';
-                  element.innerHTML = '<h3>Thank you for your support!</h3>';
-                  
-                  // Or go to another URL: actions.redirect('thank_you.html');
-                  
-                  });
-                  },
-                  onError: function(err) {
-                  console.log(err);
-                  },
-                  }).render('#paypal-button-container');
-                  }
-                  initPayPalButton();
-                  </script>
-                  </div>
-                <div class="footer">        
-                  <p>© 2023 @YEJIN1000 | All Right Reserved</p>
-                </div>
-      
-      
-              </div>
-             </div>
-           </div>
-                <div class="footer">        
-                  <p>© 2023 @YEJIN1000 | All Right Reserved</p>
-                </div>
-      
-      
-              </div>
-             </div>
-           </div>
+                  <p> I love animals and have a dog of my own. 
+                    While some pets are fortunate to live in loving homes, 
+                    others are not as lucky. Unfortunately, 
+                    there are people who adopt or buy dogs without the ability or responsibility to care for them, 
+                    leading to cases of neglect, abuse, or abandonment.<br>
 
-           <footer>
-            <ul class="sci">
-              <li><a href="https://www.instagram.com/yejin_1000/"  target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
-              <li><a href="https://www.linkedin.com/in/yejin-chun/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-              <li><a href="mailto:yejin.chunNO@SPAMuon.edu.au?" target="_blank"><ion-icon name="mail-unread-outline"></ion-icon></a></li>
-              <div id="toggle2">
-                <i class="indicator"></i>
+                    <br>As someone who deeply cares about animals, I want to help prevent such suffering. 
+                    I regularly donate to animal protection organizations and volunteer at shelters for abandoned dogs.<br>
+                    
+                    <br> If you also want to support this cause but don’t know how, you can send donations to the account below, 
+                    and I will make sure the funds reach the right organizations. Or, if you’re interested in volunteering, feel free to contact me! 
+                    <br><br><span>Let’s work together to create a kinder world for animals.</span></p>
+                </div>
+               
               </div>
-            </ul>
-          </footer>
+             </div>
+           </div>
         </section>
+
+        <section class="Second">
+            <div class="payment">
+              <div class="bg"></div>
+              <div class="card">
+                <img src="PICTURE/chip.png" class="chip">
+                <div class="logoing"></div>
+                <h2 class="bankName" contenteditable="true">Pets in Need</h2>
+                  <form>
+                    <div class="inputBox">
+                      <span>Card No.</span>
+                      <input type="text" placeholder="0123 4567 8910 0987" maxlength="19">
+                      <div class="inputBox">
+                        <span>Card Holder</span>
+                        <input type="text" placeholder="Protect animals, save lives" maxlength="20">
+                      </div>
+                      <div class="group">
+                        <div class="inputBox">
+                          <span>Valid Thru</span>
+                          <input type="text" placeholder="MM/YY" maxlength="5">
+                        </div>
+                        <div class="inputBox">
+                          <span>CCV</span>
+                          <input type="password" placeholder="***" maxlength="3">
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <button class="btn">
+                  <div class="paypall">
+                      <div id="smart-button-container">
+                      <div style="text-align: center;">
+                      <div style="margin-bottom: 1.25rem;">
+                      <p><br>Paw & Planet Fund (USD)</p>
+                      <select id="item-options"><option price="5" value="🫎 Environmental Fund - 5USD"> 🫎 Environmental Fund - 5USD </option><option price="10" value="🐋 Rescue Fund">🐋 Rescue Fund - 10USD</option></select> <select id="quantitySelect" style="visibility: hidden"></select></div>
+                      
+                      <div class="ppbtn" id="paypal-button-container">&nbsp;</div>
+                      </div>
+                      </div>
+                      <script src="https://www.paypal.com/sdk/js?client-id=AX_IBqtzb0z7gGY92mJL9TkIgHDSsk5xKRVk7efuWLTfpwhXWI1UIGhDF0SBLDJGfAvMkbk5OkMLEaHW&currency=USD" data-sdk-integration-source="button-factory"></script><script>
+                      function initPayPalButton() {
+                      var shipping = 0;
+                      var itemOptions = document.querySelector("#smart-button-container #item-options");
+                      var quantity = parseInt();
+                      var quantitySelect = document.querySelector("#smart-button-container #quantitySelect");
+                      if (!isNaN(quantity)) {
+                      quantitySelect.style.visibility = "visible";
+                      }
+                      var orderDescription = 'TEST SINGLE ITEM';
+                      if(orderDescription === '') {
+                      orderDescription = 'Item';
+                      }
+                      paypal.Buttons({
+                      style: {
+                      shape: 'pill',
+                      color: 'black',
+                      layout: 'horizontal',
+                      label: 'paypal',
+                      
+                      },
+                      createOrder: function(data, actions) {
+                      var selectedItemDescription = itemOptions.options[itemOptions.selectedIndex].value;
+                      var selectedItemPrice = parseFloat(itemOptions.options[itemOptions.selectedIndex].getAttribute("price"));
+                      var tax = (0 === 0 || false) ? 0 : (selectedItemPrice * (parseFloat(0)/100));
+                      if(quantitySelect.options.length > 0) {
+                      quantity = parseInt(quantitySelect.options[quantitySelect.selectedIndex].value);
+                      } else {
+                      quantity = 1;
+                      }
+                      
+                      tax *= quantity;
+                      tax = Math.round(tax * 100) / 100;
+                      var priceTotal = quantity * selectedItemPrice + parseFloat(shipping) + tax;
+                      priceTotal = Math.round(priceTotal * 100) / 100;
+                      var itemTotalValue = Math.round((selectedItemPrice * quantity) * 100) / 100;
+                      
+                      return actions.order.create({
+                      purchase_units: [{
+                      description: orderDescription,
+                      amount: {
+                      currency_code: 'USD',
+                      value: priceTotal,
+                      breakdown: {
+                      item_total: {
+                      currency_code: 'USD',
+                      value: itemTotalValue,
+                      },
+                      shipping: {
+                      currency_code: 'USD',
+                      value: shipping,
+                      },
+                      tax_total: {
+                      currency_code: 'USD',
+                      value: tax,
+                      }
+                      }
+                      },
+                      items: [{
+                      name: selectedItemDescription,
+                      unit_amount: {
+                      currency_code: 'USD',
+                      value: selectedItemPrice,
+                      },
+                      quantity: quantity
+                      }]
+                      }]
+                      });
+                      },
+                      onApprove: function(data, actions) {
+                      return actions.order.capture().then(function(orderData) {
+                      
+                      // Full available details
+                      console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                      
+                      // Show a success message within this page, e.g.
+                      const element = document.getElementById('paypal-button-container');
+                      element.innerHTML = '';
+                      element.innerHTML = '<h3>Thank you for your support!</h3>';
+                      
+                      // Or go to another URL: actions.redirect('thank_you.html');
+                      
+                      });
+                      },
+                      onError: function(err) {
+                      console.log(err);
+                      },
+                      }).render('#paypal-button-container');
+                      }
+                      initPayPalButton();
+                      </script>
+                      </div>
+               </div>
+              
+                    </div>
+                  </Section>
+                  </div>  
+                </buttom>
+              </div>
+            </div>
+        </section>
+    
+      </div>
+      <footer>
+        <ul class="sci">
+          <li><a href="https://www.instagram.com/yejin_1000/"  target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="https://www.linkedin.com/in/yejin-chun/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+          <li><a href="mailto:yejin.chunNO@SPAMuon.edu.au?" target="_blank"><ion-icon name="mail-unread-outline"></ion-icon></a></li>
+          <div id="toggle2">
+            <i class="indicator"></i>
+          </div>
+        </ul>
+      </footer>
 
         
           <script>
