@@ -75,7 +75,7 @@ header nav a:hover{
 .first_section{
   position: flex;
   width:100%;
-  margin-top: 5%;
+  margin-top: 3%;
   height: 100vh;
   justify-content: center;
   display: flex;
@@ -83,9 +83,28 @@ header nav a:hover{
   flex-direction: column;
   transform-origin: left;
   transition: 0.5s;
-  background-image: linear-gradient(to right,#ffffff1a 1px,transparent 1px),
-                    linear-gradient(to bottom,#ffffff1a 1px,transparent 1px);
-  background-size: 10vh 10vh;
+}
+
+.first_section img{
+  place-items: center;
+  width: 100%;
+  transition: 0.5s;
+}
+
+.first_section .bannerme101{
+  width: 100%;
+  height:auto;
+  display: grid;
+  position: relative;
+  animation: fade linear;
+  animation-timeline: view();
+}
+.bannerme101{
+  position: absolute;
+}
+
+.bannerme1{
+  position: absolute;
 }
 
 
@@ -94,7 +113,7 @@ header nav a:hover{
 
 h2{
   color: #fff;
-  font-size: clamp(2.9rem, 9vw, 6.5rem);
+  font-size: clamp(2.2rem, 6vw, 6rem);
   font-weight: 600;
   padding: 0 10px;
   position: relative;
@@ -150,10 +169,10 @@ h2 span::before{
   top:0;
   left:0;
   width:130;
-  color: #fe9001;
+  color: #2CE6FB;
   overflow: hidden;
-  border-right: 4px solid #fe9001;
-  filter: drop-shadow(0 0 5px #fe9001) drop-shadow(0 0 25px #fe9001);
+  border-right: 4px solid #2CE6FB;
+  filter: drop-shadow(0 0 5px #2CE6FB) drop-shadow(0 0 25px #2CE6FB);
   animation: animate 3s linear infinite;
 }
 
@@ -167,17 +186,27 @@ h2 span::before{
 }
 
 .first_section p{
-  margin-top: 100px;
-  text-align: center;
+  margin-top: 50px;
+  text-align: left;
   color: #b6b6b6;
+  margin-left: -25%;
 }
 .first_section p span{
-  color:#ffc53e;
-  border-bottom: 2px solid #ffc53e;
-  border-radius: 50px;
-  padding:0 20px;
-
+  font-size: clamp(0.9rem, 2vw, 1.3rem);
+  color:#2CE6FB;
 }
+
+@media (max-width: 1100px){
+  .first_section p{
+    margin-top: 50px;
+    color: #b6b6b6;
+    margin-left: 0%;
+    margin-top: 20%;
+    transition: 0.5s;
+  }
+}
+
+/*second s- */
 
 .second_section{
   width: 100%;
@@ -191,7 +220,8 @@ h2 span::before{
 }
 
 .second_section h2{
-  font-size: clamp(1rem, 3vw, 1.8rem);
+  font-size: clamp(0.9rem, 2vw, 1.3rem);
+  text-align: right;
   font-weight: 500;
   margin-top: 100px;
   padding: 0px 100px;
@@ -199,6 +229,7 @@ h2 span::before{
   animation-timeline: view();
   place-items: center;
   left:10px;
+  color:#2CE6FB;
 }
 .second_section img{
   place-items: center;
@@ -235,7 +266,7 @@ h2 span::before{
 .second_section .verticle{
   display: grid;
   padding: 10px;
-  color: #ffc880;
+  color: #acd6db;
   animation: fade linear;
   animation-timeline: view();
 
@@ -245,7 +276,7 @@ h2 span::before{
   align-items: center;
   text-transform: uppercase;
   margin-bottom: 20px;
-  color:#fe9001;
+  color:#00b3c7;
   animation: fade linear;
   animation-timeline: view();
 
@@ -254,7 +285,7 @@ h2 span::before{
   justify-content: start;
   align-items: center;
   text-align: top;
-  font-size: clamp(0.9em, 1vw, 1.9em);
+  font-size: clamp(0.8em, 1vw, 1.5em);
   animation: fade linear;
   animation-timeline: view();
 
@@ -322,7 +353,7 @@ h2 span::before{
 }
 
 .third_section p{
-  font-size: clamp(1em, 1.2vw, 1.9em);
+  font-size: clamp(0.9em, 1vw, 1.6em);
   text-align: center;
   padding: 40px;
   color:#00411b;
@@ -346,7 +377,7 @@ h2 span::before{
 .third_section_edit h3{
   margin-top: 10%;
   padding: 50px 100px 0;
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: 300;
   color: #fff;
   text-align: center;
@@ -459,7 +490,7 @@ h2 span::before{
 }
 
 .last_section p{
-  font-size: 1.5em;
+  font-size: clamp(0.9em, 1vw, 1.6em);
   color: #fff;
   text-align: center;
   padding: 100px 100px;
@@ -590,11 +621,11 @@ body.active{
 
 
 
-body.active .first_section{
+/*body.active .first_section{
   background-image: linear-gradient(to right,#181f3133 1px,transparent 1px),
   linear-gradient(to bottom,#181f3133 1px,transparent 1px);
   background-size: 10vh 10vh;
-}
+}*/
 
 body.active header .logoo {
   color:#181f31;
@@ -610,6 +641,10 @@ body.active header .toggle{
 
 body.active .menu li a{
   color: #181f31;
+}
+body.active .first_section .bannerme1{
+  opacity: 0;
+  transition: 0.5s;
 }
 
 body.active p{
@@ -631,12 +666,9 @@ body.active h2 span::before{
   filter: drop-shadow(0 0 10px #a6a6a6) drop-shadow(0 0 20px #ffffff);
 }
 
-body.active p span{
+body.active p span,
+body.active .second_section .verticle h3{
   color:#fe9001;
-  border-bottom: 2px solid #fe9001;
-  border-radius: 50px;
-  padding:0 20px;
-
 }
 
 body.active header nav a.active,
@@ -751,19 +783,19 @@ body.active .cookie2{
     color:#070a11;
   }
   .second_section .verticle:nth-child(1){
-    background-color: #ffa32c;
+    background-color: #3BB6C5;
   }
   .second_section .verticle:nth-child(2){
-    background-color: #ffab40;
+    background-color: #55D0DF;
   }
   .second_section .verticle:nth-child(3){
-    background-color: #ffb659;
+    background-color: #6FDFED;
   }
   .second_section .verticle:nth-child(4){
-    background-color: #ffc77d;
+    background-color: #94F2FC;
   }
   .second_section .verticle:nth-child(5){
-    background-color: #ffdeb3;
+    background-color: #C0F7FE;
   }
 
   h2 span{
