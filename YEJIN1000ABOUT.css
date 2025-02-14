@@ -251,7 +251,7 @@ h2 span::before{
 
 .second_section .herizontal{
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-template-rows: minmax(300px,auto);
   gap: 10px;
   align-content: space-evenly;
@@ -288,8 +288,181 @@ h2 span::before{
   font-size: clamp(0.8em, 1vw, 1.5em);
   animation: fade linear;
   animation-timeline: view();
-
 }
+
+
+
+/*insight*/
+
+.insight-info{
+  width: 100%;
+  min-height: 50vh;  
+  animation: fade linear;
+  animation-timeline: view();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: left;
+  transition: 0.5s;
+}
+
+.insight-info-de{
+  margin-top: 20%;
+  width: 100%;
+  color: #2CE6FB;
+  font-size:  clamp(0.9rem, 2vw, 1.3rem);
+  transition: 0.5s;
+  text-align: center;
+  padding: 30px;
+  animation: fade linear;
+  animation-timeline: view();
+  transition: 0.5s;
+}
+
+.insight{
+  width: 100%;
+  min-height: 100vh;
+  transform-origin: left;
+  transition: 0.5s;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: minmax(300px,auto);
+  gap: 10px;
+  margin-top:10%;
+  transform-origin: left;
+  transition: 0.5s;
+}
+
+.insight-cul{
+  display: flex;
+  align-items: center;
+  place-content: center;
+  transition: 0.5s;
+}
+
+.boxxgirll{
+  display: grid;
+  align-items: center;
+  place-content: center;
+  transition: 0.5s;
+  animation: fade linear;
+  animation-timeline: view();
+  position: relative;
+  place-items: center;
+  z-index: -3;
+}
+
+.article{
+  width: 100%;
+  height: 100%;
+  display: inline-grid;
+  justify-items: end;
+  align-items: center;
+  align-content: center;
+  transition: 0.3s;
+  animation: fade linear;
+  animation-timeline: view();
+}
+
+.boxxgirll img{
+  right:130px;
+  width:400px;
+  transition: 0.5s;
+  position: absolute;
+  transition: 0.5s;
+}
+
+.boxxgirll .boxgirl2{
+  opacity: 0;
+  transition: 0.5s;
+  width:500px;
+  z-index: -3;
+}
+
+
+.articlesss{
+  width: 80%;
+  padding: 10px;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 2%;
+  align-content: center;
+  display: inline;
+  transition: 0.4s;
+}
+
+.articlesss h3{
+  font-size: clamp(0.9rem, 1.1vw, 1.2rem);
+  padding-bottom: 10px;
+}
+
+.articlesss .artbutton a{
+  padding-top: 30px;
+  align-items: end;
+  place-content: end;
+  display: flex;
+  margin-right: 5%;
+  border: none;
+  font-size: 20px;
+  font-style: italic;
+  text-decoration-line: none;
+  color:#fff;
+  transition: 0.3s;
+}
+
+.articlesss .artbutton a:hover{
+  font-weight: 700;
+  transition: 0.3s;
+  letter-spacing: 2px;
+}
+
+.article .articlesss:nth-child(odd):hover{
+  background-color: #ffc53e;
+  transition: 0.4s;
+}
+
+.article .articlesss:nth-child(even):hover{
+  background-color: #ffe099;
+  transition: 0.4s;
+}
+
+
+.article .articlesss:nth-child(1){
+  background-color: #C0F7FE;
+}
+.article .articlesss:nth-child(2){
+  background-color: #6495ED;
+  margin-right: 10%;
+}
+.article .articlesss:nth-child(3){
+  background-color: #00C6FF;
+}
+.article .articlesss:nth-child(4){
+  background-color: #2C6A87;
+  margin-right: 10%;
+}
+.article .articlesss:nth-child(5){
+  background-color: #1DA2C8;
+}
+
+
+@media (max-width: 1000px){
+  .boxxgirll{
+    display: none;
+    transition: 0.5s;
+  }
+
+  .article{
+    width: 100%;
+    height: 100%;
+    display: inline-grid;
+    justify-items: center;
+    transition: 0.5s;
+  }
+}
+
+/*insight end*/
+
 
 .third_section{
   width: 100%;
@@ -317,6 +490,8 @@ h2 span::before{
   flex-direction: column;
   background-color: #edf4e2;
   border-radius: 100px;
+  transform-origin: left;
+  transition: 0.5s;
 }
 
 .third_section h3{
@@ -372,6 +547,8 @@ h2 span::before{
   transition: 0.5s;
   animation: fade linear;
   animation-timeline: view();
+  transform-origin: left;
+  transition: 0.5s;
 }
 
 .third_section_edit h3{
@@ -472,6 +649,8 @@ h2 span::before{
   transition: 0.5s;
   animation: fade linear;
   animation-timeline: view();
+  transform-origin: left;
+  transition: 0.5s;
 }
 .last_section .cookierun{
   width: 100%;
@@ -562,13 +741,21 @@ header .toggle.active{
   color: #161a23;
 }
 
+
+
 .banner.active .first_section,
 .banner.active .second_section,
+.banner.active .insight-info,
+.banner.active .insight{
+  transform: scale(0);
+}
+
 .banner.active .third_section_edit,
 .banner.active .third_section,
 .banner.active .last_section{
   transform: scale(0);
 }
+
 
 /*toggle2*/
 
@@ -681,8 +868,56 @@ body.active .second_section .halfcircle1{
   transition: 0.5s;
 }
 
+body.active .insight-info-de{
+  color:#fe9001;
+}
+
+
+body.active .article .articlesss:nth-child(odd):hover{
+  background-color: #5363A1;
+  transition: 0.4s;
+}
+
+body.active .article .articlesss:nth-child(even):hover{
+  background-color: #1E2C62;
+  transition: 0.4s;
+  color:#fff;
+}
+
+
+body.active .article .articlesss:nth-child(1){
+  background-color: #FFA32C;
+  color: #2F2C28;
+}
+body.active .article .articlesss:nth-child(2){
+  background-color: #FFE8CA;
+  margin-right: 10%;
+  color: #2F2C28;
+}
+body.active .article .articlesss:nth-child(3){
+  background-color: #FFC77E;
+}
+body.active .article .articlesss:nth-child(4){
+  background-color: #CC7A0F;
+  margin-right: 10%;
+}
+body.active .article .articlesss:nth-child(5){
+  background-color: #FFB659;
+}
+
+
 body.active .third_section .nature{
   opacity: 0;
+  transition: 0.5s;
+}
+
+body.active .insight .boxxgirll .boxgirl{
+  opacity: 0;
+  transition: 0.5s;
+}
+
+body.active .insight .boxxgirll .boxgirl2{
+  opacity: 1;
   transition: 0.5s;
 }
 
