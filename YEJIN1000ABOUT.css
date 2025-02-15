@@ -496,6 +496,14 @@ h2 span::before{
     justify-items: center;
     transition: 0.5s;
   }
+
+  .article .articlesss:nth-child(2){
+    margin-right: 0%;
+  }
+  .article .articlesss:nth-child(4){
+    margin-right: 0%;
+  }
+
 }
 
 /*insight end*/
