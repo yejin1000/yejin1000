@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>YEJIN CHUN | Liquid Blast Effects </title>
+    <link rel="stylesheet"  href="Liquid Blast Effects dark.css">
+  </head>
+  <body>
+    <div class="circle"></div>
+    <svg>
+      <filter id="gooey">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="8"/>
+        <feColorMatrix values = " 1 0 0 0 0
+                                  0 1 0 0 0
+                                  0 0 1 0 0
+                                  0 0 0 20 -5"/>
+      </filter>
+    </svg>
+    <script>
+      let circle = document.querySelector('.circle');
+      circle.addEventListener('click', function(){
+        for(let i = 0; i < 50; i++){
+          let particles = document.createElement('i');
+          particles.classList.add('particles');
+
+          let randomX = (Math.random() - 0.5) * window.innerWidth;
+          let randomY = (Math.random() - 0.5) * window.innerHeight;
+
+          particles.style.setProperty('--x', randomX + 'px');
+          particles.style.setProperty('--y', randomY + 'px');
+
+          let duration = Math.random() * 3 + 2;
+          particles.style.animation = `droplet ${duration}s ease forwards`;
+
+          let randomSize = Math.random() * 60 + 10;
+          particles.style.width = randomSize + 'px';
+          particles.style.height = randomSize + 'px';
+
+          document.body.appendChild(particles);
+
+          setTimeout(function(){
+            particles.remove();
+          }, 5000)
+        }
+      })
+
+      let text = document.querySelector('.click-text');
+      function updateTextPosition() {
+      let circleRect = circle.getBoundingClientRect();
+      text.style.left = `${circleRect.left + circleRect.width / 2}px`;
+      text.style.top = `${circleRect.top + circleRect.height / 2}px`;
+      text.style.transform = "translate(-50%, -50%)"; // 정확한 중앙 정렬
+    }
+
+    // 처음 로드될 때 위치 업데이트
+    updateTextPosition();
+
+    // 윈도우 크기 변경 시 다시 위치 업데이트
+    window.addEventListener("resize", updateTextPosition);
+
+      
+    </script>
+  </body>
+
+</html>
