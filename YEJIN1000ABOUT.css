@@ -608,7 +608,8 @@ h2 span::before{
   /*background: rgba(0,0,0,0.2);*/
 }
 
-.container .card:hover{
+.container .card:hover,
+.container .card:active{
 background: #2CE6FB;
 box-shadow: 25px 25px 75px rgba(0,0,0,0.25),
             10px 10px 70px rgba(0,0,0,0.25),
@@ -640,7 +641,8 @@ transform: translateY(-20px);
   transition: 0.5s;
 }
 
-.container .card:hover .box .icon{
+.container .card:hover .box .icon,
+.container .card:active .box .icon{
   background: #2C6A87;
   color:#fff;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.25),
@@ -668,7 +670,8 @@ transform: translateY(-20px);
   letter-spacing: 1px;
   transition: 0.5s;
 }
-
+.container .card:active .content h1,
+.container .card:active .content p,
 .container .card:hover .content h1,
 .container .card:hover .content p{
   color: #043145;
@@ -688,7 +691,7 @@ transform: translateY(-20px);
   transition: 0.5s;
 
 }
-
+.container .card:active .content a,
 .container .card:hover .content a{
   background: #2C6A87;
   color:#fff;
@@ -1008,7 +1011,7 @@ body.active .third_section_edit h3{
   color: #181f31;
   transition: 0.5s;
 }
-
+body.active .container .card:active,
 body.active .container .card:hover{
 background: #181f31;
 box-shadow: 25px 25px 75px rgba(0,0,0,0.25),
@@ -1023,7 +1026,7 @@ body.active .container .card .box .icon{
   color:#181f31;
   transition: 0.5s;
 }
-
+body.active .container .card:active .box .icon,
 body.active .container .card:hover .box .icon{
   background: #ffc53e;
   color:#fff;
@@ -1039,12 +1042,14 @@ body.active .container .card .content p{
   color:rgba(0, 0, 0, 0.467);
 }
 
+body.active .container .card:active .content h1,
+body.active .container .card:active .content p,
 body.active .container .card:hover .content h1,
 body.active .container .card:hover .content p{
   color: #ffffff;
 }
 
-
+body.active .container .card:active .content a,
 body.active .container .card:hover .content a{
   background: #ffffff91;
   color:#ededed;
