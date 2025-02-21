@@ -712,47 +712,71 @@ transform: translateY(-20px);
 .last_section{
   width: 100%;
   min-height: 100vh;
-  position: relative;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  transform-origin: left;
   transition: 0.5s;
   animation: fade linear;
   animation-timeline: view();
   transform-origin: left;
   transition: 0.5s;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
-.last_section .cookierun{
-  width: 100%;
-  height:auto;
-  display: grid;
+
+
+.pulse{
   position: relative;
-  place-items: center;
+  width: 200px;
+  height: 200px;
+  box-shadow: inset 0 0 40px #12b9ff,
+                    0 0 50px #12b9ff;
+  border-radius: 50%; 
+  border:1px solid #12b9ff;
+  background: url(PICTURE/mapp-dark.png);
+  background-size: cover;
+  animation: animateEarth 10s linear infinite;
   transition: 0.5s;
 }
-.cookie{
+
+.pulse span{
   position: absolute;
-  transition: 0.5s;
-}
-.cookie2{
-  opacity: 0;
-}
-
-.last_section p{
-  font-size: clamp(0.9em, 1vw, 1.6em);
-  color: #fff;
-  text-align: center;
-  padding: 100px 100px;
-  margin-top: -10%;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  border: 1px solid #12b9ff;
+  animation: circle-circle 6s linear infinite;
+  animation-delay: calc(var(--i) * -1s);
+  border-radius: 50%;
 }
 
-.last_section img{
-  transition: 0.5s;
-  place-items: center;
-  width: 80%;
+@keyframes circle-circle{
+  0%{
+    width: 200px;
+    height: 200px;
+    opacity: 1;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    width: 600px;
+    height: 600px;
+    opacity: 0;
+  }
 }
+
+@keyframes animateEarth{
+  0%{
+    background-position-x: 0px;
+  }
+  100%{
+    background-position-x: 400px;
+  }
+
+}
+
+
 
 /*toggle1*/
 /*only for the moblie*/
@@ -1071,6 +1095,24 @@ body.active .button{
   transition: 0.5s;
 }
 
+body.active .pulse{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  box-shadow: inset 0 0 40px #ffc53e,
+                    0 0 50px #ffc53e;
+  border-radius: 50%; 
+  border:1px solid #ffc53e;
+  background: url(PICTURE/mapp-day.png);
+  background-size: cover;
+  animation: animateEarth 10s linear infinite;
+}
+
+body.active .pulse span{
+  border: 1px solid #ffc53e;
+}
+
+
 body.active footer .sci li{
   filter:invert(1);
   transition: 0.5s;
@@ -1107,15 +1149,6 @@ body.active .cookie2{
     font-size: 12px;
     padding: 15px;
   }
-  .last_section img{
-    width: 80%;
-  }
-
-  .last_section p{
-    font-size: 1em;
-    padding: 50px 50px;
-  }
-
   .third_section img{
     width: 300px;
   }
